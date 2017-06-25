@@ -6,7 +6,7 @@ var express     = require('express');
 var mongoose    = require('mongoose');
 var bodyP       = require('body-parser');
 
-mongoose.connect('mongodb://localhost:27017/showsdb');
+mongoose.connect('mongodb://heroku_h8d2db42:4qg5l71v0plfbodm93ldjfsnt8@ds139352.mlab.com:39352/heroku_h8d2db42');
 
 var app = express();
 
