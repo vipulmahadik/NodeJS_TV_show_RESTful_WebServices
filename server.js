@@ -13,7 +13,7 @@ var app = express();
 app.use(bodyP.urlencoded({extended: true}));
 app.use(bodyP.json());
 
-var port = process.env.port || 4800;
+var port = process.env.PORT || 4800;
 
 var router = express.Router();
 
