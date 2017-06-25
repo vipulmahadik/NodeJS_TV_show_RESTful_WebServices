@@ -1,0 +1,26 @@
+{
+  "name": "tv_show_rest_api_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipulmahadik/NodeJS_TV_show_RESTful_WebServices.git"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "body-parser": "*",
+    "nodemon": "*"
+  },
+  "author": "Vipulkumar Mahadik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vipulmahadik/NodeJS_TV_show_RESTful_WebServices/issues"
+  },
+  "homepage": "https://github.com/vipulmahadik/NodeJS_TV_show_RESTful_WebServices#readme"
+}
