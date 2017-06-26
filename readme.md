@@ -1,6 +1,5 @@
 TV Shows REST API (NodeJS)!
 ===================
---------
 [A TV Show RESTful Web Services](http://guarded-river-66359.herokuapp.com/api) created with Node and ExpressJS. This project was built while learning the REST API with Node. The project is been deployed on Heroku.
 
 The IDE used was WebStorm by Intellij.
@@ -12,10 +11,10 @@ Dependencies:
 -----
 Following are the dependencies of this project
 
- 1. Express
- 2. Mongoose
- 3. Body Parser
- 4. Nodemon
+ 1. [Express](https://expressjs.com)
+ 2. [Mongoose](http://mongoosejs.com)
+ 3. [Body Parser](https://www.npmjs.com/package/body-parser-json)
+ 4. [Nodemon](https://www.npmjs.com/package/nodemon)
 
 ------
 Setup and Usage:
