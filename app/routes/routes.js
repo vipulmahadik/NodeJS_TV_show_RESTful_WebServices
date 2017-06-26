@@ -12,7 +12,40 @@ module.exports = function (router) {
     });
 
     router.get('/', function (req, res) {
-        res.json({message: "Everything working great!"});
+        res.json({
+            message: "Everything working great!",
+            paths: "You can access the api on following urls",
+            urls: {
+                GET: {
+                    "https://guarded-river-66359.herokuapp.com/api/shows": "Get all shows from database",
+                    "https://guarded-river-66359.herokuapp.com/api/show/594f2ff6edd48a42ffd988ee": "Get details about a single show",
+                    "https://guarded-river-66359.herokuapp.com/api/genre/comedy": "Get all the shows from Comedy genre",
+                    "https://guarded-river-66359.herokuapp.com/api/title/sherlock":"Get shows with title Sherlock"
+
+                },
+                POST:{
+                    "https://guarded-river-66359.herokuapp.com/api/shows": "For adding a new show in the Database"
+                },
+                PUT: {
+                    "https://guarded-river-66359.herokuapp.com/api/show/594f2ff6edd48a42ffd988ee": [
+                        "To change a parameter from the show (Should already exist)",
+                        "Expects the desired parameter and its value",
+                        "Or a new parameter to be inserted"
+                    ],
+                    "https://guarded-river-66359.herokuapp.com/api/like/594f2ff6edd48a42ffd988ee":[
+                        "To capture a like on a show.",
+                        "The show ID needs to be passed",
+                        "The likes value is incremented by 1"
+                    ]
+                },
+                DELETE:{
+                    "https://guarded-river-66359.herokuapp.com/api/like/594f2ff6edd48a42ffd988ee": [
+                        "To delete a show from database",
+                        "Expects the show id in the url"
+                    ]
+                }
+            }
+        });
     });
 
 
@@ -78,7 +111,7 @@ module.exports = function (router) {
             });
     });
 
-    router.get('/like/:sid',function (req, res) {
+    router.put('/like/:sid',function (req, res) {
         show.findByIdAndUpdate(req.params.sid,{$inc: {likes:1} }, function (err) {
             if(err)
                 res.json({message: err});

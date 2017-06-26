@@ -10,10 +10,10 @@ mongoose.connect('mongodb://heroku_h8d2db42:4qg5l71v0plfbodm93ldjfsnt8@ds139352.
 
 var app = express();
 
+app.set('json spaces', 4);
 app.use(bodyP.urlencoded({extended: true}));
 app.use(bodyP.json());
 
-app.set('json spaces', 2);
 
 var port = process.env.PORT || 4800;
 
