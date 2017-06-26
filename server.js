@@ -13,6 +13,8 @@ var app = express();
 app.use(bodyP.urlencoded({extended: true}));
 app.use(bodyP.json());
 
+app.set('json spaces', 2);
+
 var port = process.env.PORT || 4800;
 
 var router = express.Router();
@@ -21,6 +23,10 @@ var routes = require('./app/routes/routes')(router);
 
 
 app.use('/api', routes);
+
+app.get('/',function (req,res) {
+    res.redirect('/api');
+});
 
 app.listen(port,function () {
     console.log("Node instance is running on "+port);

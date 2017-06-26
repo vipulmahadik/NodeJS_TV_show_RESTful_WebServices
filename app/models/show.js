@@ -7,7 +7,7 @@ var nums = {type: Number, default:0};
 var ShowSchema = new Schema({
     id: ObjectId,
     name: String,
-    genre: {type: String, enum: ["comedy", "drama", "suspence", "romance"]},
+    genre: {type: String, enum: ["comedy", "drama", "suspence", "romance", "news"]},
     likes: nums,
     hits: nums,
     description: String
